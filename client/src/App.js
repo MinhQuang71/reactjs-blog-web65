@@ -6,10 +6,12 @@ import Settings from "./pages/settings/Settings"
 import Login from "./pages/login/Login"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Register from "./pages/register/Register"
+import { useContext } from "react";
+import { Context } from "./context/Context";
 
 
 export default function App() {
-  const user = false;
+  const { user } = useContext(Context);
   return (
     <Router>
       <TopBar/>
